@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from chatterbot.ext.django_chatterbot import urls as chatterbot_urls
-import riba.views
+from riba.views import ChatterBotAppView,contact,doctor,appointment
 
 
 urlpatterns = [
