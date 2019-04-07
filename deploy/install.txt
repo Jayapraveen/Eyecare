@@ -1,0 +1,36 @@
+//heroku login
+heroku login
+
+// GIT
+git add .
+git commit -m "comment"
+git push -u origin
+
+//heroku limits
+heroku config:set WEB_CONCURRENCY=3
+
+//heroku db link
+heroku run manage.py migrate
+
+//heroku train
+heroku run manage.py train
+
+//heroku dbg
+heroku logs --tail
+
+//heroku bash 
+heroku apps
+heroku run bash --app rec-riba
+
+//heroku clear cache
+
+
+Use heroku-repo plugin purge_cache command:
+
+heroku plugins:install heroku-repo
+heroku repo:purge_cache -a appname
+
+//ENVIRON VARIALBES
+DISABLE_COLLECTSTATIC = 0
+WEB_CONCURRENCY = 3
+ON_HEROKU = True
